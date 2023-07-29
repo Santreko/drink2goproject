@@ -1,0 +1,127 @@
+.button {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: @base-primary;
+  color: @base-white;
+  border: none;
+  cursor: pointer;
+  display: block;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    background-color: @primary-lighter;
+  }
+
+  &:active {
+    background-color: @primary-darker;
+  }
+
+  &:disabled {
+    background-color: @base-grey;
+  }
+}
+
+.button--slider-buy {
+  width: 113px;
+}
+
+.button--form-submut {
+  margin-bottom: 20px;
+  width: 280px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 137px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 149px;
+  }
+}
+
+.button--form-reset {
+  margin-bottom: 36px;
+  width: 280px;
+  background-color: @base-white;
+  color: @base-primary;
+
+  &:hover,
+  &:focus {
+    color: @base-white;
+  }
+
+  &:disabled {
+    color: @base-white;
+    background-color: @light-grey;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 120px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 149px;
+  }
+}
+
+.button--product-card {
+  width: 141px;
+  padding-right: 20px;
+  line-height: 20px;
+  position: relative;
+  text-align: right;
+  font-size: 14px;
+
+  &:disabled {
+    cursor: default;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+.button--product-card::before {
+  position: absolute;
+  content: "";
+  top: 10px;
+  left: 20px;
+  width: 20px;
+  height: 16px;
+  background-image: url("../../img/catalog/buy-icon.svg");
+
+  @media (min-width: @tablet-width) {
+    left: 20px;
+  }
+}
+
+.button--social {
+  width: 40px;
+  height: 40px;
+  background-color: @base-white;
+  text-align: center;
+
+  &:hover,
+  &:focus {
+    background-color: @base-secondary;
+  }
+
+  &:hover path,
+  &:focus path {
+    fill: @base-primary;
+  }
+
+  &:active {
+    background-color: @primary-opacity;
+  }
+}

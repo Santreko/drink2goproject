@@ -1,0 +1,108 @@
+.control {
+  line-height: 24px;
+  position: relative;
+  display: block;
+  padding-left: 34px;
+}
+
+.control--checkbox {
+  padding-left: 52px;
+}
+
+.control__mark {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 2px solid @base-grey;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+}
+
+.control__input[type="radio"]:not(:disabled):not(:checked):hover + .control__mark {
+  border-color: @primary-lighter;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-color: @primary-opacity;
+    width: 16px;
+    height: 16px;
+    top: 2px;
+    left: 2px;
+    border-radius: 50%;
+  }
+}
+
+.control__input[type="radio"]:checked + .control__mark {
+  border-color: @base-primary;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-color: @base-primary;
+    width: 16px;
+    height: 16px;
+    top: 2px;
+    left: 2px;
+    border-radius: 50%;
+  }
+}
+
+.control__input[type="radio"]:disabled + .control__mark{
+  border-color: @light-grey;
+}
+
+.control__input[type="radio"]:disabled:checked + .control__mark{
+  border-color: @light-grey;
+
+  &::after {
+    background-color: @light-grey;
+  }
+}
+
+.control__input[type="checkbox"] + .control__mark {
+  width: 42px;
+  background-color: @base-grey;
+  border-radius: 12px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    background-color: @base-white;
+  }
+}
+
+.control__input[type="checkbox"]:not(:disabled):not(:checked):hover + .control__mark,
+.control__input[type="checkbox"]:not(:disabled):not(:checked):focus + .control__mark {
+  background-color: @primary-opacity;
+  border-color: @primary-lighter;
+}
+
+.control__input[type="checkbox"]:checked + .control__mark {
+  background-color: @primary-lighter;
+  border-color: @primary-lighter;
+
+  &::after {
+    left: 18px;
+  }
+}
+
+.control__input[type="checkbox"]:disabled + .control__mark {
+  background-color: @light-grey;
+  border-color: @light-grey;
+}
+
+.control__input[type="checkbox"]:checked:disabled + .control__mark {
+  &::after {
+    background-color: @base-grey;
+  }
+}
+
+
+

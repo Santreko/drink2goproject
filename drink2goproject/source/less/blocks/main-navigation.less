@@ -1,0 +1,117 @@
+.main-navigation {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid @base-secondary;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 40px;
+    padding-right: 40px;
+    justify-content: space-between;
+  }
+}
+
+.main-navigation--closed {
+  margin-bottom: 0;
+}
+
+.main-navigation--nojs {
+  margin-bottom: 228px;
+}
+
+.main-navigation__link {
+  padding-left: 20px;
+  margin-top: 4px;
+  margin-bottom: auto;
+  cursor: pointer;
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.main-navigation__logo {
+  @media (min-width: @tablet-width) {
+    width: 82px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 170px;
+  }
+}
+
+.main-navigation__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-navigation__toggle {
+  height: 60px;
+  width: 60px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background-color: @base-white;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-navigation--closed .main-navigation__toggle {
+  background: url("../../img/header/burger-menu.svg") center no-repeat;
+
+  &:active {
+    background-color: @base-secondary;
+  }
+}
+
+.main-navigation--opened .main-navigation__toggle {
+  background: url("../../img/header/cross.svg") center no-repeat;
+
+  &:active {
+    background-color: @base-secondary;
+  }
+}
+
+.main-navigation--nojs .main-navigation__toggle {
+  display: none;
+}
+
+.main-navigation--closed .site-navigation {
+  display: none;
+}
+
+.main-navigation--nojs .site-navigation {
+  position: absolute;
+  display: block;
+}
+
+.main-navigation .site-navigation {
+  @media (min-width: @tablet-width) {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 67px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    justify-content: center;
+    column-gap: 20px;
+  }
+}

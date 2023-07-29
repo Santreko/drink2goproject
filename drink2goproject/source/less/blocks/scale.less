@@ -1,0 +1,70 @@
+.scale {
+  height: 4px;
+  width: 280px;
+  background-color: @light-grey;
+  position: relative;
+  margin-bottom: 34px;
+
+  @media (min-width: @tablet-width) {
+    width: 223px;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 318px;
+  }
+}
+
+.scale__bar {
+  height: 4px;
+  background-color: @primary-lighter;
+  position: absolute;
+  margin-left: 11px;
+  width: 241px;
+  left: 1px;
+
+  @media (min-width: @tablet-width) {
+    width: 181px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 274px;
+  }
+}
+
+.scale__toggle {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid @primary-lighter;
+  padding: 0;
+  cursor: pointer;
+  background-color: @base-white;
+
+  &:hover::after,
+  &:focus::after {
+    position: absolute;
+    content: "";
+    background-color: @primary-opacity;
+    width: 16px;
+    height: 16px;
+    top: 2px;
+    left: 2px;
+    border-radius: 50%;
+  }
+
+  &:active::after {
+    background-color: @base-primary;
+  }
+}
+
+.scale__toggle--min {
+  top: -9px;
+  left: -11px;
+}
+
+.scale__toggle--max {
+  top: -9px;
+  right: -8px;
+}

@@ -1,0 +1,23 @@
+.main-header__logo-wrapper {
+  padding-top: 4px;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+  }
+}
+
+.main-header__title {
+  display: none;
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    order: 2;
+    min-width: 126px;
+  }
+}

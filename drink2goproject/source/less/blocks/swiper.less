@@ -1,0 +1,21 @@
+.swiper {
+  --swiper-navigation-size: 20px;
+  --swiper-navigation-color: @base-primary;
+  --swiper-navigation-top-offset: 50%;
+  --swiper-navigation-sides-offset: 0;
+
+  @media (min-width: @tablet-width) {
+    --swiper-navigation-sides-offset: 30px;
+  }
+}
+
+.swiper-pagination {
+  display: none;
+}
+
+.swiper-pagination-bullet {
+  --swiper-pagination-bullet-height: 4px;
+  --swiper-pagination-bullet-width: 62px;
+  --swiper-pagination-bullet-border-radius: 0;
+  --swiper-theme-color: @base-primary;
+}
